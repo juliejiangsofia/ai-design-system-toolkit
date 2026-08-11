@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0.0",
+  "libraries": [
+    {
+      "id": "shadcn-vue",
+      "name": "shadcn-vue",
+      "referenceFile": "shadcn-vue.md",
+      "sourcePath": "src/components/ui/",
+      "productLines": ["website", "ai-product", "universal"],
+      "priority": 0,
+      "globalRegistered": false,
+      "importMethod": "shadcn-install",
+      "techStack": "Vue 3 + shadcn-vue + Tailwind CSS 4",
+      "componentCount": 47,
+      "namingConvention": "PascalCase (e.g. Button, Card, Dialog)",
+      "styleKeywords": ["年轻", "现代", "好看", "时尚", "酷", "不古板", "shadcn", "简洁现代", "太丑", "换风格"],
+      "description": "现代感组件库，适合官网、AI产品、C端页面。组件需按需安装到项目中。"
+    },
+    {
+      "id": "art-design-pro",
+      "name": "Art Design Pro",
+      "referenceFile": "art-design-pro.md",
+      "sourcePath": "<project-root>/src/components/core/",
+      "productLines": ["b-end"],
+      "priority": 1,
+      "globalRegistered": true,
+      "importMethod": "none",
+      "techStack": "Vue 3 + Element Plus + Tailwind CSS 4 + SCSS",
+      "componentCount": 71,
+      "namingConvention": "Art + PascalCase (e.g. ArtStatsCard, ArtTable)",
+      "description": "B端管理后台组件库，71个全局注册的Art*组件，涵盖卡片、图表、表单、表格、布局等"
+    },
+    {
+      "id": "captured",
+      "name": "Captured Components",
+      "referenceFile": null,
+      "sourcePath": "~/Desktop/component-lib/",
+      "indexFile": "~/Desktop/component-lib/index.json",
+      "productLines": ["b-end", "website", "ai-product", "universal"],
+      "priority": 99,
+      "globalRegistered": false,
+      "importMethod": "local-import",
+      "techStack": "Vue 3 + Element Plus + Tailwind CSS 4 + SCSS",
+      "componentCount": null,
+      "namingConvention": "PascalCase",
+      "description": "通过浏览器插件采集并由 AI 生成的组件，持续增长中"
+    }
+  ]
+}

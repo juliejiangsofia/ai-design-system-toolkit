@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>右键另存每个 canvas 为 PNG，或直接把下面 base64 复制出来。</p>
+<script>
+[16, 48, 128].forEach(size => {
+  const canvas = document.createElement('canvas');
+  canvas.width = size;
+  canvas.height = size;
+  const ctx = canvas.getContext('2d');
+
+  const r = size * 0.2;
+  const pad = size * 0.05;
+  ctx.beginPath();
+  ctx.roundRect(pad, pad, size - pad * 2, size - pad * 2, r);
+  ctx.fillStyle = '#4f46e5';
+  ctx.fill();
+
+  ctx.fillStyle = '#fff';
+  ctx.font = `bold ${size * 0.35}px -apple-system, sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('CC', size / 2, size / 2 + size * 0.02);
+
+  document.body.appendChild(canvas);
+  const link = document.createElement('a');
+  link.download = `icon${size}.png`;
+  link.href = canvas.toDataURL('image/png');
+  link.textContent = ` Download icon${size}.png `;
+  document.body.appendChild(link);
+  document.body.appendChild(document.createElement('br'));
+});
+</script>
+</body>
+</html>

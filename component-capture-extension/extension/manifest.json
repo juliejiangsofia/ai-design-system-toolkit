@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Component Capture",
+  "version": "0.2.0",
+  "description": "一键采集网页交互组件，生成结构化数据供 Cursor AI 复刻",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "Component Capture — 点击开始采集"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
